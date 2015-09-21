@@ -3,7 +3,7 @@
 
 -----------
 * 1.下载管理类作为单例对象，接收url，并分发给下载类进行下载
-```
+
     + (instancetype)sharedManager
     {
     static HTTPDownloadManager * manager = nil;
@@ -14,8 +14,9 @@
     return manager;
 
     }
+
 * 2.下载类进行下载任务，下载完成存入缓存数组，并回调到下载管理类
-```
+
     //下载完成回调
     [download setHTTPDownloadFinishBlock:^(HTTPDownload *download) {
         
